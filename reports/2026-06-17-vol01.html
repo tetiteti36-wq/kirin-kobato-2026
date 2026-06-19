@@ -45,7 +45,7 @@
     </p>
 
     <h2>📸 当日の様子</h2>
-    <p class="note">※ 写真はクリック（タップ）すると大きく表示されます。</p>
+    <p class="note">※ 写真はクリック（タップ）で拡大。長いキャプションも、拡大すると全文が読めます。</p>
     <div class="gallery">
       <figure>
         <img src="../assets/img/g1.jpg" alt="とおわのお茶堂とのコラボレーション" loading="lazy" />
@@ -170,9 +170,9 @@
     </p>
 
     <h2>🗒 開催のおしらせ（配布チラシ）</h2>
-    <div class="gallery">
+    <div class="flyer-wrap">
       <figure>
-        <img src="../assets/img/vol01-flyer.jpg" alt="第1回 視える旧小鳩美術部 チラシ" />
+        <img src="../assets/img/vol01-flyer.jpg" alt="第1回 視える旧小鳩美術部 チラシ" loading="lazy" />
         <figcaption>毎回、日付を変えて配布しているチラシ（vol.1版）。</figcaption>
       </figure>
     </div>
@@ -199,7 +199,7 @@
       lb.classList.remove('open'); lb.setAttribute('aria-hidden', 'true');
       lbi.src = ''; document.body.style.overflow = '';
     }
-    document.querySelectorAll('.gallery figure').forEach(function (fig) {
+    document.querySelectorAll('.gallery figure, .flyer-wrap figure').forEach(function (fig) {
       var img = fig.querySelector('img'),
           cap = fig.querySelector('figcaption');
       if (!img) return;
