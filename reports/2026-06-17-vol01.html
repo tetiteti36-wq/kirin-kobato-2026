@@ -21,9 +21,15 @@
       <h1>町の真ん中の民家で、描く姿を「視せる」最初の一日</h1>
       <div class="facts">
         <div class="f"><div class="k">開催日</div><div class="v">2026.6.17（水）</div></div>
-        <div class="f"><div class="k">会場</div><div class="v">十和・東隣の民家</div></div>
-        <div class="f"><div class="k">参加</div><div class="v">子ども8・大人1・先生2</div></div>
+        <div class="f"><div class="k">会場</div><div class="v">スーパー彦市十和店 東隣の民家</div></div>
+        <div class="f"><div class="k">開催時間</div><div class="v">10:00–18:00</div></div>
         <div class="f"><div class="k">制作時間</div><div class="v">16:00–17:00</div></div>
+      </div>
+      <div class="facts-label">参加（のべ）</div>
+      <div class="facts">
+        <div class="f"><div class="k">お茶堂＋美術部関連の来場</div><div class="v">12名</div></div>
+        <div class="f"><div class="k">美術部員（先生2名込）</div><div class="v">11名</div></div>
+        <div class="f"><div class="k">道から覗いた・声かけ</div><div class="v">数名</div></div>
       </div>
     </header>
 
@@ -34,27 +40,48 @@
     </p>
     <p>
       引き戸を開け放った土間に大きな机を置き、子どもたちがぐるりと囲んで描く。
-      その様子が、そのまま道ゆく人から<strong>「視える」</strong>。作品だけでなく、
-      <em>描いている姿そのもの</em>をまちに開いていく、という今年度の挑戦の一歩目でした。
+      その様子が、そのまま道ゆく人から<strong>「視える」</strong>。作品を展示し、
+      <em>描いている姿そのもの</em>も、まちに開いていく。という今年度の挑戦の一歩目でした。
     </p>
 
     <h2>📸 当日の様子</h2>
+    <p class="note">※ 写真はクリック（タップ）すると大きく表示されます。</p>
     <div class="gallery">
       <figure>
-        <img src="../assets/img/vol01-01.jpg" alt="大きな机を囲んで描く子どもたちと指導者" />
-        <figcaption>机を囲んで一斉に。壁には観察画がずらり。</figcaption>
+        <img src="../assets/img/g1.jpg" alt="とおわのお茶堂とのコラボレーション" loading="lazy" />
+        <figcaption>「とおわのお茶堂」とコラボレーション。</figcaption>
       </figure>
       <figure>
-        <img src="../assets/img/vol01-02.jpg" alt="道に開かれた土間のアトリエ、覗き込む来訪者" />
-        <figcaption>道に開いた土間。ふらりと覗く人も。</figcaption>
+        <img src="../assets/img/g2.jpg" alt="壁面を埋める美術部員の作品" loading="lazy" />
+        <figcaption>壁面を埋める美術部員の作品。</figcaption>
       </figure>
       <figure>
-        <img src="../assets/img/vol01-03.jpg" alt="国道沿いに建つ民家アトリエと十和のまちなみ" />
-        <figcaption>国道沿いの民家。まちの真ん中で。</figcaption>
+        <img src="../assets/img/g3.jpg" alt="壁面を埋める美術部員の作品" loading="lazy" />
+        <figcaption>壁面を埋める美術部員の作品。</figcaption>
       </figure>
       <figure>
-        <img src="../assets/img/vol01-04.jpg" alt="アトリエの前で語らう大人たち" />
-        <figcaption>軒先では大人たちの立ち話も。</figcaption>
+        <img src="../assets/img/g4.jpg" alt="壁面を埋める美術部員の作品" loading="lazy" />
+        <figcaption>壁面を埋める美術部員の作品。</figcaption>
+      </figure>
+      <figure>
+        <img src="../assets/img/g5.jpg" alt="お茶堂にスマホの相談に来られた方" loading="lazy" />
+        <figcaption>お茶堂に「スマホの使い方の相談」に来られた方。孫たちと同い年の作品も観られたようです。</figcaption>
+      </figure>
+      <figure>
+        <img src="../assets/img/g6.jpg" alt="お茶堂に遊びにきた様子" loading="lazy" />
+        <figcaption>お茶堂に遊びにきてパチリ。</figcaption>
+      </figure>
+      <figure>
+        <img src="../assets/img/g7.jpg" alt="あったかパンの販売" loading="lazy" />
+        <figcaption>あったかふれあいセンター就労支援事業の「あったかパン」の販売。パンを目当てに訪れて、お話に花が咲いたり、作品を鑑賞したり——そんな機会が生まれています。</figcaption>
+      </figure>
+      <figure>
+        <img src="../assets/img/g8.jpg" alt="制作する子どもを見守る先生" loading="lazy" />
+        <figcaption>先生が、美術製作を行う姿を見守っています。</figcaption>
+      </figure>
+      <figure>
+        <img src="../assets/img/g9.jpg" alt="道すがら興味津々で訪れる人々" loading="lazy" />
+        <figcaption>「何をやってるの？」と、道すがら興味津々で訪れてこられる方も複数人いました。</figcaption>
       </figure>
     </div>
 
@@ -151,6 +178,41 @@
     </div>
 
   </main>
+
+  <!-- 画像拡大（ライトボックス） -->
+  <div id="lightbox" aria-hidden="true">
+    <img id="lightbox-img" src="" alt="" />
+    <div id="lightbox-cap"></div>
+    <button id="lightbox-close" type="button" aria-label="閉じる">×</button>
+  </div>
+  <script>
+  (function () {
+    var lb  = document.getElementById('lightbox'),
+        lbi = document.getElementById('lightbox-img'),
+        lbc = document.getElementById('lightbox-cap');
+    function openLb(src, cap) {
+      lbi.src = src; lbc.textContent = cap || '';
+      lb.classList.add('open'); lb.setAttribute('aria-hidden', 'false');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeLb() {
+      lb.classList.remove('open'); lb.setAttribute('aria-hidden', 'true');
+      lbi.src = ''; document.body.style.overflow = '';
+    }
+    document.querySelectorAll('.gallery figure').forEach(function (fig) {
+      var img = fig.querySelector('img'),
+          cap = fig.querySelector('figcaption');
+      if (!img) return;
+      img.addEventListener('click', function () {
+        openLb(img.getAttribute('src'), cap ? cap.textContent : '');
+      });
+    });
+    lb.addEventListener('click', closeLb);
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape') closeLb();
+    });
+  })();
+  </script>
 
   <footer class="site-foot">
     <p>視える 旧小鳩美術部 ｜ 令和8年度 活動記録<br />
