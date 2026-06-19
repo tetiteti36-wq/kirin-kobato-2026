@@ -1,0 +1,225 @@
+/* =========================================================
+   美術部 活動記録 — 共通スタイル
+   既存サイト（小鳩美術部）のデザイントークンに準拠
+   静的サイト（ビルドなし） / バニラCSS
+   ========================================================= */
+
+:root {
+  --clr-forest-green: #2C5E43;
+  --clr-soft-blue:    #A9D1E1;
+  --clr-accent-yellow:#F4C430;
+  --clr-accent-orange:#E67E22;
+  --clr-text-main:    #333333;
+  --clr-text-light:   #666666;
+  --clr-bg-light:     #F9F7F5;
+  --clr-bg-white:     #FFFFFF;
+  --clr-line:         #e7e2da;
+
+  --font-heading: 'Shippori Mincho', serif;
+  --font-body:    'Noto Sans JP', sans-serif;
+
+  --space-sm: 1rem;
+  --space-md: 2rem;
+  --space-lg: 4rem;
+
+  --br-sm: 8px;
+  --br-md: 16px;
+  --br-lg: 24px;
+
+  --shadow: 0 8px 28px rgba(44, 94, 67, .08);
+  --maxw:   760px;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  color: var(--clr-text-main);
+  background-color: var(--clr-bg-light);
+  line-height: 1.9;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+}
+
+.wrap { max-width: var(--maxw); margin: 0 auto; padding: 0 20px; }
+
+/* ---------- ヘッダー ---------- */
+.site-head {
+  text-align: center;
+  padding: 4rem 20px 2rem;
+}
+.site-head .badge {
+  display: inline-block;
+  font-size: 13px;
+  letter-spacing: .12em;
+  color: var(--clr-forest-green);
+  background: var(--clr-bg-white);
+  border: 1px solid var(--clr-line);
+  padding: 5px 16px;
+  border-radius: 999px;
+  margin-bottom: 1.4rem;
+}
+.site-head h1 {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: clamp(28px, 5vw, 40px);
+  color: var(--clr-forest-green);
+  margin: 0 0 .6rem;
+  letter-spacing: .06em;
+}
+.site-head p {
+  color: var(--clr-text-light);
+  margin: 0 auto;
+  max-width: 30em;
+  font-size: 15px;
+}
+.rule {
+  width: 56px; height: 3px; margin: 1.4rem auto 0;
+  background: var(--clr-accent-yellow); border-radius: 3px;
+}
+
+/* ---------- レポート一覧（カード） ---------- */
+.feed { padding: 1.2rem 0 4rem; }
+
+.card {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  background: var(--clr-bg-white);
+  border: 1px solid var(--clr-line);
+  border-radius: var(--br-md);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  margin-bottom: 1.8rem;
+  transition: transform .18s ease, box-shadow .18s ease;
+}
+.card:hover { transform: translateY(-3px); box-shadow: 0 14px 34px rgba(44,94,67,.14); }
+
+.card .thumb {
+  aspect-ratio: 16 / 9;
+  background: #eceae5 center/cover no-repeat;
+  display: flex; align-items: center; justify-content: center;
+  color: #b3ada1; font-size: 14px;
+}
+.card .body { padding: 1.4rem 1.6rem 1.6rem; }
+.card .meta {
+  display: flex; gap: 14px; flex-wrap: wrap; align-items: center;
+  font-size: 13px; color: var(--clr-text-light); margin-bottom: .5rem;
+}
+.card .meta .vol {
+  font-family: var(--font-heading);
+  color: var(--clr-bg-white);
+  background: var(--clr-forest-green);
+  padding: 2px 12px; border-radius: 999px; font-size: 12.5px;
+  letter-spacing: .05em;
+}
+.card h2 {
+  font-family: var(--font-heading); font-weight: 600;
+  color: var(--clr-forest-green);
+  font-size: 21px; margin: 0 0 .4rem;
+}
+.card .excerpt { color: var(--clr-text-light); font-size: 14.5px; margin: 0; }
+
+/* ---------- 記事ページ ---------- */
+.article { padding: .6rem 0 4.5rem; }
+.article .back {
+  display: inline-block; margin: .6rem 0 1.4rem;
+  color: var(--clr-text-light); text-decoration: none; font-size: 14px;
+}
+.article .back:hover { color: var(--clr-forest-green); }
+
+.article header {
+  border-bottom: 1px solid var(--clr-line);
+  padding-bottom: 1.4rem; margin-bottom: 1.6rem;
+}
+.article .vol-tag {
+  font-family: var(--font-heading);
+  color: var(--clr-bg-white); background: var(--clr-forest-green);
+  padding: 3px 14px; border-radius: 999px; font-size: 13px; letter-spacing: .06em;
+}
+.article h1 {
+  font-family: var(--font-heading); font-weight: 600;
+  color: var(--clr-forest-green);
+  font-size: clamp(23px, 4.5vw, 31px); margin: .8rem 0 1.2rem;
+  line-height: 1.5;
+}
+
+.facts {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  gap: 10px; margin: 0;
+}
+.facts .f {
+  background: var(--clr-bg-white); border: 1px solid var(--clr-line);
+  border-radius: var(--br-sm); padding: 10px 12px;
+}
+.facts .f .k { font-size: 12px; color: var(--clr-text-light); }
+.facts .f .v {
+  font-family: var(--font-heading); font-size: 16px; font-weight: 600;
+  color: var(--clr-forest-green);
+}
+
+.article h2 {
+  font-family: var(--font-heading); font-weight: 600;
+  font-size: 20px; color: var(--clr-forest-green);
+  margin: 2.4rem 0 .7rem;
+  padding-left: 14px; border-left: 4px solid var(--clr-accent-yellow);
+}
+.article p { margin: 0 0 1rem; }
+.article .note { color: var(--clr-text-light); font-size: 13px; }
+.article ul {
+  margin: 0 0 1rem; padding: 0; list-style: none;
+}
+.article ul li {
+  position: relative; padding: .5rem .8rem .5rem 1rem;
+  margin-bottom: .5rem;
+  background: var(--clr-bg-white); border: 1px solid var(--clr-line);
+  border-left: 3px solid var(--clr-soft-blue);
+  border-radius: var(--br-sm);
+}
+
+/* 写真ギャラリー */
+.gallery {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 10px; margin: .5rem 0;
+}
+.gallery figure { margin: 0; }
+.gallery img {
+  width: 100%; aspect-ratio: 4/3; object-fit: cover;
+  border-radius: var(--br-sm); border: 1px solid var(--clr-line); display: block;
+}
+.gallery figcaption { font-size: 12px; color: var(--clr-text-light); margin-top: 4px; text-align: center; }
+.ph {
+  width: 100%; aspect-ratio: 4/3; border-radius: var(--br-sm);
+  background: #eceae5;
+  display: flex; align-items: center; justify-content: center;
+  color: #b3ada1; font-size: 13px; border: 1px dashed #d6d0c5;
+}
+
+/* お金メモ */
+.money {
+  background: var(--clr-bg-white); border: 1px solid var(--clr-line);
+  border-left: 4px solid var(--clr-soft-blue);
+  border-radius: var(--br-sm); padding: 14px 18px; font-size: 14px;
+}
+.money .ttl {
+  font-family: var(--font-heading);
+  color: var(--clr-forest-green); font-weight: 600; margin-bottom: .2rem;
+}
+
+/* ---------- フッター ---------- */
+.site-foot {
+  text-align: center; color: var(--clr-text-light); font-size: 12.5px;
+  padding: 2rem 20px 3rem; margin-top: 2rem;
+  border-top: 1px solid var(--clr-line);
+  line-height: 2;
+}
+.site-foot .kirin { color: var(--clr-forest-green); }
+.site-foot a { color: var(--clr-forest-green); }
+
+/* 編集者向けの注記（公開時に消す） */
+.draft-note {
+  background: #fffaf0; border: 1px dashed var(--clr-accent-orange); color: #a85f1c;
+  border-radius: var(--br-sm); padding: 10px 14px; font-size: 13px; margin: 14px 0;
+}
