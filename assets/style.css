@@ -80,8 +80,17 @@ body {
   background: var(--clr-accent-yellow); border-radius: 3px;
 }
 
-/* ---------- レポート一覧（カード） ---------- */
-.feed { padding: 1.2rem 0 4rem; }
+/* ---------- レポート一覧（カード／横3枚グリッド） ---------- */
+.feed {
+  max-width: 1120px; margin: 0 auto;
+  padding: 1.4rem 20px 4.5rem;
+}
+.card-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr);
+  gap: 24px; align-items: stretch;
+}
+@media (max-width: 900px) { .card-grid { grid-template-columns: repeat(2, 1fr); gap: 18px; } }
+@media (max-width: 600px) { .card-grid { grid-template-columns: 1fr; } }
 
 .card {
   display: block;
@@ -92,10 +101,27 @@ body {
   border-radius: var(--br-md);
   box-shadow: var(--shadow);
   overflow: hidden;
-  margin-bottom: 1.8rem;
   transition: transform .18s ease, box-shadow .18s ease;
 }
 .card:hover { transform: translateY(-3px); box-shadow: 0 14px 34px rgba(44,94,67,.14); }
+
+/* 次回予告カード（記事ができたら通常カードに置き換え） */
+.card-next {
+  border: 2px dashed var(--clr-line); background: transparent; box-shadow: none;
+  display: flex; align-items: center; justify-content: center; text-align: center;
+  min-height: 220px;
+}
+.card-next:hover { transform: none; box-shadow: none; }
+.next-inner { padding: 1.6rem; color: var(--clr-text-light); }
+.vol-ghost {
+  display: inline-block; font-family: var(--font-heading);
+  color: var(--clr-text-light); background: transparent;
+  border: 1px solid var(--clr-line); padding: 2px 12px; border-radius: 999px;
+  font-size: 12.5px; letter-spacing: .05em; margin-bottom: .7rem;
+}
+.next-date { font-family: var(--font-heading); color: var(--clr-forest-green); font-size: 17px; margin: 0 0 .2rem; }
+.next-title { font-size: 14px; margin: 0 0 .8rem; }
+.next-note { font-family: var(--font-heading); font-size: 15px; color: var(--clr-text-light); margin: 0; letter-spacing: .1em; }
 
 .card .thumb {
   aspect-ratio: 16 / 9;
@@ -144,6 +170,18 @@ body {
   color: var(--clr-forest-green);
   font-size: clamp(23px, 4.5vw, 31px); margin: .8rem 0 1.2rem;
   line-height: 1.5;
+}
+
+/* シンボル写真（タイトル直下の大きなヒーロー画像） */
+.hero {
+  margin: 0 0 1.6rem;
+  width: min(100vw - 36px, 920px);
+  margin-left: 50%; transform: translateX(-50%);
+}
+.hero img {
+  width: 100%; height: auto; display: block;
+  border-radius: var(--br-md); border: 1px solid var(--clr-line);
+  box-shadow: var(--shadow); cursor: zoom-in;
 }
 
 .facts {
