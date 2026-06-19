@@ -78,7 +78,7 @@
       </figure>
       <figure>
         <img src="../assets/img/g7.jpg" alt="あったかパンの販売" loading="lazy" />
-        <figcaption>あったかふれあいセンター就労支援事業の「あったかパン」の販売。パンを目当てに訪れて、お話に花が咲いたり、作品を鑑賞したり——そんな機会が生まれています。</figcaption>
+        <figcaption class="caption-fade">あったかふれあいセンター就労支援事業の「あったかパン」を販売。パンをきっかけに会話が生まれ、作品を楽しんでいただく機会にもなりました。</figcaption>
       </figure>
       <figure>
         <img src="../assets/img/g8.jpg" alt="制作する子どもを見守る先生" loading="lazy" />
@@ -93,10 +93,10 @@
     <h2>✍️ この日のながれ</h2>
     <p>
       スーパー彦市十和店の横にある<strong>M邸</strong>を、10:00〜18:00の1日お借りして開催。
-      このうち10:00〜16:00は、同じ会場でひらかれる<strong>「お茶堂」</strong>との
+      このうち10:00〜16:00は、同じ会場でひらかれる<strong><a class="inline-link" href="https://tetiteti36-wq.github.io/towaochadou-site/" target="_blank" rel="noopener noreferrer">「お茶堂」</a></strong>との
       <strong>同時開催</strong>としました。お茶堂にすでに来られている方が美術部を見てくれるのでは、
       という私たちの期待と、美術部の企画が気になって立ち寄る方がおられるのでは、という
-      お茶堂側の期待。その両方が重なって、自然と<strong>コラボレーション</strong>するかたちに。
+      お茶堂側の期待。その両方を重ね、<strong>コラボレーション</strong>するカタチにしました。
     </p>
     <p>
       制作が動き出したのは15時すぎ。メンバーが集まり始め、創作開始です。
@@ -177,8 +177,8 @@
     <h2>🗒 開催のおしらせ（配布チラシ）</h2>
     <div class="flyer-wrap">
       <figure>
-        <img src="../assets/img/vol01-flyer.jpg" alt="第1回 視える旧小鳩美術部 チラシ" loading="lazy" />
-        <figcaption>毎回、日付を変えて配布しているチラシ（vol.1版）。</figcaption>
+        <img src="../assets/img/vol01-flyer.jpg" alt="第1回 視える旧小鳩美術部 チラシ" loading="lazy" tabindex="0" role="button" aria-label="開催チラシを拡大表示" />
+        <figcaption>毎回、日付を変えて配布しているチラシ（vol.1版）。クリック（タップ）で拡大できます。</figcaption>
       </figure>
     </div>
 
@@ -211,6 +211,12 @@
       img.addEventListener('click', function () {
         openLb(img.getAttribute('src'), cap ? cap.textContent : '');
       });
+      img.addEventListener('keydown', function (e) {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          openLb(img.getAttribute('src'), cap ? cap.textContent : '');
+        }
+      });
     });
     lb.addEventListener('click', closeLb);
     document.addEventListener('keydown', function (e) {
@@ -222,6 +228,10 @@
   <footer class="site-foot">
     <p>視える 旧小鳩美術部 ｜ 令和8年度 活動記録<br />
        主催：育つ会とおわ ／ 助成：<span class="kirin">公益財団法人 キリン福祉財団</span> 地域のちから応援事業</p>
+    <nav class="site-links" aria-label="関連サイト">
+      <a href="https://tetiteti36-wq.github.io/kobato-art-site/" target="_blank" rel="noopener noreferrer">旧小鳩美術部 公式サイト</a>
+      <a href="https://tetiteti36-wq.github.io/towaochadou-site/" target="_blank" rel="noopener noreferrer">とおわのお茶堂 公式サイト</a>
+    </nav>
   </footer>
 
 </body>
