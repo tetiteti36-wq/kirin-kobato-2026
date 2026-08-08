@@ -269,6 +269,20 @@ body {
 }
 .inline-link:hover { color: var(--clr-accent-orange); }
 .article .note { color: var(--clr-text-light); font-size: 16px; }
+
+/* 注釈（本文中のマーカーと、対応する脚注） */
+.fn-ref {
+  font-size: .75em; color: var(--clr-accent-orange);
+  font-weight: 700; vertical-align: .3em; margin: 0 .1em;
+  white-space: nowrap;
+}
+.article .footnote {
+  font-size: 15px; line-height: 1.9; color: var(--clr-text-light);
+  background: var(--clr-bg-light); border-left: 3px solid var(--clr-accent-orange);
+  border-radius: 0 var(--br-sm) var(--br-sm) 0;
+  padding: .9rem 1.1rem; margin: 1.2rem 0 1.6rem;
+}
+.article .footnote strong { color: var(--clr-text-main); }
 .article ul {
   margin: 0 0 1rem; padding: 0; list-style: none;
 }
