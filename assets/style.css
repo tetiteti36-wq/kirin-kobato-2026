@@ -454,3 +454,30 @@ body {
   background: #fffaf0; border: 1px dashed var(--clr-accent-orange); color: #a85f1c;
   border-radius: var(--br-sm); padding: 10px 14px; font-size: 13px; margin: 14px 0;
 }
+
+/* ---------- 引用（取材や参加者の言葉） ---------- */
+.quote {
+  margin: 2rem 0;
+  padding: 1.6rem 1.8rem;
+  background: var(--clr-bg-white);
+  border-left: 5px solid var(--clr-forest-green);
+  border-radius: 0 var(--br-sm) var(--br-sm) 0;
+  box-shadow: var(--shadow);
+}
+.quote p {
+  margin: 0;
+  font-family: var(--font-heading);
+  font-size: 20px;
+  line-height: 2.05;
+}
+.quote .who {
+  display: block;
+  margin-top: 1rem;
+  font-family: var(--font-body);
+  font-size: 15px;
+  color: var(--clr-text-light);
+}
+@media (max-width: 600px) {
+  .quote { padding: 1.2rem 1.2rem; }
+  .quote p { font-size: 18px; }
+}
